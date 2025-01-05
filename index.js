@@ -7,6 +7,7 @@ const Dispatch = require('./models/Dispatch');
 const Summary = require('./models/Summary');
 const User = require('./models/User'); // Import the User model
 const path = require('path');
+const MongoStore = require('connect-mongo');
 const connectDB = require('./db'); // Import the connectDB function
 
 const app = express();
