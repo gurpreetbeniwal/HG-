@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Dispatches</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Dispatches</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Agent</th>
+                    <th>Firm Name</th>
+                    <th>Quality</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Transport</th>
+                    <th>Remark</ th>
+                    <th>PO Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(dispatch => { %>
+                    <tr>
+                        <td><%= dispatch.Date.toDateString() %></td>
+                        <td><%= dispatch.Agent %></td>
+                        <td><%= dispatch.Firm_Name %></td>
+                        <td><%= dispatch.Quality %></td>
+                        <td><%= dispatch.Quantity %></td>
+                        <td><%= dispatch.Rate %></td>
+                        <td><%= dispatch.Transport %></td>
+                        <td><%= dispatch.Remark %></td>
+                        <td><%= dispatch.PO_Number %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+</html>

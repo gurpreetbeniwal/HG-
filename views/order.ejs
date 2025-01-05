@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Order</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Add Order</h1>
+        <form action="/add-order" method="POST">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" name="attribute1" required>
+            </div>
+            <div class="form-group">
+                <label for="agent">Agent</label>
+                <input type="text" class="form-control" name="attribute2" required>
+            </div>
+            <div class="form-group">
+                <label for="firmName">Firm Name</label>
+                <input type="text" class="form-control" name="attribute3" required>
+            </div>
+            <div class="form-group">
+                <label for="quality">Quality</label>
+                <input type="text" class="form-control" name="attribute4" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" name="attribute5" required>
+            </div>
+            <div class="form-group">
+                <label for="rate">Rate</label>
+                <input type="number" class="form-control" name="attribute6" required>
+            </div>
+            <div class="form-group">
+                <label for="transport">Transport</label>
+                <input type="text" class="form-control" name="attribute7" required>
+            </div>
+            <div class="form-group">
+                <label for="remark">Remark</label>
+                <input type="text" class="form-control" name="attribute8">
+            </div>
+            <div class="form-group">
+                <label for="poNumber">PO Number</label>
+                <input type="text" class="form-control" name="attribute9" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

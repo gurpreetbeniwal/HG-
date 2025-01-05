@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Summary</h1>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Firm Name</th>
+                    <th>Quality</th>
+                    <th>Rate</th>
+                    <th>Total Orders</th>
+                    <th>Total Dispatches</th>
+                    <th>Pending Orders</th>
+                    <th>Total Order Quantity</th> <!-- New column for total order quantity -->
+                    <th>Total Dispatch Quantity</th> <!-- New column for total dispatch quantity -->
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(summary => { %>
+                    <tr>
+                        <td><%= summary.Agent %></td>
+                        <td><%= summary.Firm_Name %></td>
+                        <td><%= summary.Quality %></td>
+                        <td><%= summary.Rate %></td>
+                        <td><%= summary.totalOrders %></td>
+                        <td><%= summary.totalDispatches %></td>
+                        <td><%= summary.pendingOrders %></td>
+                        <td><%= summary.totalOrderQuantity %></td> <!-- Display total order quantity -->
+                        <td><%= summary.totalDispatchQuantity %></td> <!-- Display total dispatch quantity -->
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Back to Orders</a>
+    </div>
+</body>
+</html>
